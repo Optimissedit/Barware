@@ -34,6 +34,26 @@ public class SlotMachine {
 		return result;
 	}
 	
+	private int payOut(int[] num) {
+		
+		int compare = num[0];
+		boolean pay = true;
+		
+		for(int i = 0; i < 3; i++) {
+			
+			if(num[i] != compare || num[i] < 0) {
+				pay = false;
+			}
+		}
+		
+		if(pay) {
+			return 2 * denom;
+		}
+		else {
+			return 0;
+		}
+	}
+	
 	// Starts a single spin for a user
 	public void play() {
 		
@@ -42,6 +62,9 @@ public class SlotMachine {
 		for(int i = 0; i < 3; i++) {
 			System.out.print(hehe[i]);
 		}
+		
+		int creds = payOut(hehe);
+		System.out.println("\nPlayer wins " + creds + " credits.");
 
 	}
 	
