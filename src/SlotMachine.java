@@ -65,6 +65,7 @@ public class SlotMachine {
 		
 		int creds = payOut(hehe);
 		System.out.println("\nPlayer wins " + creds + " credits.");
+		addCredits(creds);
 
 	}
 	

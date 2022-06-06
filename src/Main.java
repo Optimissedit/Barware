@@ -5,7 +5,9 @@ public class Main {
 		SlotMachine s = new SlotMachine(10, 1);
 		
 		while(true) {
+			
 			s.play();	
+			
 			try{System.in.read();}
 			catch(Exception e){}
 		}
